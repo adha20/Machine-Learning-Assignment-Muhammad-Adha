@@ -4,14 +4,14 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-# KONFIGURASI HALAMAN
+# Konfigurasi Halaman
 st.set_page_config(
     page_title="Dashboard E-Commerce Analytics", 
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
-# Custom CSS untuk tampilan Card, Metric horizontal, dan background
+# Custom CSS
 st.markdown("""
     <style>
     /* Background aplikasi */
@@ -37,26 +37,26 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 
-# LOAD DATA
+# Load Data
 @st.cache_data
 def load_data():
     try:
-        produk_terbanyak = pd.read_csv("dashboard/produk_terbanyak.csv")
-        metode_pembayaran = pd.read_csv("dashboard/metode_pembayaran.csv")
-        city_customer_summary = pd.read_csv("dashboard/city_customer_summary.csv")
-        order_review = pd.read_csv("dashboard/order_review_summary.csv")
-        feature_importance = pd.read_csv("dashboard/feature_importance.csv")
+        produk_terbanyak = pd.read_csv("produk_terbanyak.csv")
+        metode_pembayaran = pd.read_csv("metode_pembayaran.csv")
+        city_customer_summary = pd.read_csv("city_customer_summary.csv")
+        order_review = pd.read_csv("order_review_summary.csv")
+        feature_importance = pd.read_csv("feature_importance.csv")
         return produk_terbanyak, metode_pembayaran, city_customer_summary, order_review, feature_importance
     except Exception as e:
         st.error(f"Gagal memuat data: {e}")
-        return [None] * 
+        return [None] * 5
 
 df_prod, df_pay, df_city, df_rev, df_feat = load_data()
 
 # Global Style
 sns.set_style("white")
 
-# HEADER DASHBOARD
+# Header Dashboard
 st.write("") 
 
 st.markdown("""
@@ -67,7 +67,7 @@ st.markdown("""
 
 # st.divider()
 
-# BARIS 1: PRODUK TERLARIS
+# BARIS 1: Produk Terlaris
 if df_prod is not None:
     m1, col_main, m2 = st.columns([0.05, 0.9, 0.05])
     with col_main:
@@ -102,7 +102,7 @@ if df_prod is not None:
 
 st.write("") 
 
-# BARIS 2: PEMBAYARAN & KOTA
+# Baris 2: Pembayaran dan Kota
 
 m_l, card_pay, gap, card_city, m_r = st.columns([0.05, 0.44, 0.02, 0.44, 0.05])
 
@@ -172,7 +172,7 @@ with card_city:
 
 st.write("") 
 
-# BARIS 3: KETERLAMBATAN & LOGISTIK
+# Baris 3: Keterlambatan dan Logistic
 
 m_l2, card_late, gap2, card_feat, m_r2 = st.columns([0.05, 0.44, 0.02, 0.44, 0.05])
 
@@ -240,10 +240,9 @@ with card_feat:
                         """)
 
 
-# FOOTER
+# Footer
 st.markdown("""
     <div style="text-align: center; color: #94a3b8; padding-top: 30px; padding-bottom: 20px;">
         Dashboard Analytics © 2025 | Brazilian E-Commerce Dataset
     </div>
-
     """, unsafe_allow_html=True)
