@@ -21,7 +21,7 @@ Dataset yang digunakan berasal dari Kaggle yang disediakan oleh Olist, toko depa
 1. **Clone the repository**  
    Clone repositori ini ke komputer lokal Anda menggunakan git:
    ```bash
-   git clone [https://github.com/adha20/Machine-Learning-Assignment-Muhammad-Adha.git](https://github.com/adha20/Machine-Learning-Assignment-Muhammad-Adha.git)
+   git clone https://github.com/adha20/Machine-Learning-Assignment-Muhammad-Adha.git
 
 2. **Set up a virtual environment** (Optional)  
    Sangat disarankan untuk menggunakan virtual environment agar library proyek ini terpisah dari lingkungan Python sistem Anda:
