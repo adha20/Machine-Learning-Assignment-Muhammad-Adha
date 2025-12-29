@@ -52,7 +52,8 @@ Dataset yang digunakan berasal dari Kaggle yang disediakan oleh Olist, toko depa
    ```
 
 5. **Run the project**  
-  - Jupyter Notebook atau Google Colab: Anda dapat menjalankan analisis data lengkap dengan membuka file ML_Muhammad_Adha.ipynb dan menekan tombol "Run All".
+  - Jupyter Notebook atau Google Colab: Anda dapat menjalankan analisis data lengkap dengan membuka file ML_Muhammad_Adha.ipynb dan menekan tombol "Run All".  
+    **catatan**: Jangang lupa untuk download datasetnya dan upload (jika menggunakan google colab) sebelum klik run all. Untuk jupyter notebook sesuaikan path datasetnya saat load setiap tabel yang diperlukan
 
 - Dashboard Streamlit: Untuk menjalankan dashboard, ketikkan perintah berikut di terminal:
   ```Bash
