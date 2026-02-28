@@ -1,4 +1,4 @@
-# Machine Learning Session 2: Data Preprocessing
+# Machine Learning Session 2
 
 Proyek ini berisi latihan dan tugas tentang preprocessing data menggunakan dataset Titanic.
 
